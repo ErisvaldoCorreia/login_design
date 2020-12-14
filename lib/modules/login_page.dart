@@ -30,6 +30,28 @@ class LoginPage extends StatelessWidget {
               ),
             ),
           ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  'Welcome',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 38,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Hora de começar o treino! Faça Login',
+                  style: TextStyle(color: Colors.grey.shade500),
+                ),
+                // Espaçamento Final do dispositivo
+                SizedBox(height: 30),
+              ],
+            ),
+          ),
         ],
       ),
     );
