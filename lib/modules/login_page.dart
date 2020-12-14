@@ -72,6 +72,31 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(height: 12),
+                Container(
+                  height: 60,
+                  padding: EdgeInsets.symmetric(horizontal: 40),
+                  child: TextField(
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                    decoration: InputDecoration(
+                      hintText: 'Senha',
+                      hintStyle: TextStyle(
+                        color: Colors.grey.shade500,
+                      ),
+                      filled: true,
+                      fillColor: Color(0xff161d27),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 // Espaçamento Final do dispositivo
                 SizedBox(height: 30),
               ],
