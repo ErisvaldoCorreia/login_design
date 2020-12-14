@@ -37,13 +37,30 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
-                    'Welcome',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 38,
-                      fontWeight: FontWeight.w600,
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Fit',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 44,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Dosis',
+                          letterSpacing: 5,
+                        ),
+                      ),
+                      Text(
+                        'Training',
+                        style: TextStyle(
+                          color: Color(0xfffe972f),
+                          fontSize: 44,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Dosis',
+                          letterSpacing: 5,
+                        ),
+                      ),
+                    ],
                   ),
                   SizedBox(height: 10),
                   Text(
