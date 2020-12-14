@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -97,8 +99,61 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(height: 20),
+                Text(
+                  'Esqueceu sua senha?',
+                  style: TextStyle(
+                    color: Colors.red[300],
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 20),
+                Container(
+                  height: 60,
+                  width: double.infinity,
+                  padding: EdgeInsets.symmetric(horizontal: 40),
+                  child: FlatButton(
+                    onPressed: () {},
+                    color: Color(0xfffe972f),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Text(
+                      'ENTRAR',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Primeira vez aqui?',
+                      style: TextStyle(
+                        color: Colors.grey.shade500,
+                        fontSize: 16,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Text(
+                      'Cadastra-se',
+                      style: TextStyle(
+                        color: Colors.red[300],
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
                 // Espaçamento Final do dispositivo
-                SizedBox(height: 30),
+                SizedBox(height: 50),
               ],
             ),
           ),
