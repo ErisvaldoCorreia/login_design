@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_page.dart';
+
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -133,7 +135,7 @@ class LoginPage extends StatelessWidget {
                   Text(
                     'Esqueceu sua senha?',
                     style: TextStyle(
-                      color: Colors.red[300],
+                      color: Color(0xfffe972f),
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
@@ -144,7 +146,13 @@ class LoginPage extends StatelessWidget {
                     width: double.infinity,
                     padding: EdgeInsets.symmetric(horizontal: 40),
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (contex) => HomePage(),
+                            ));
+                      },
                       color: Color(0xfffe972f),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -175,7 +183,7 @@ class LoginPage extends StatelessWidget {
                       Text(
                         'Cadastra-se',
                         style: TextStyle(
-                          color: Colors.red[300],
+                          color: Color(0xfffe972f),
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                         ),
