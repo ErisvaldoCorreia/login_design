@@ -1,8 +1,7 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:login_design/modules/login_page.dart';
+import 'login_page.dart';
 
 class IntroPage extends StatefulWidget {
   @override
