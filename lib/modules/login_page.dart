@@ -4,39 +4,39 @@ import 'home_page.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      decoration: BoxDecoration(
-        color: Color(0xff161d27),
-        image: DecorationImage(
-          image: AssetImage(
-            'assets/muscleEntry.jpg',
-          ),
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Stack(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Colors.transparent,
-                      Color(0xff161d27).withOpacity(0.6),
-                      Color(0xff161d27).withOpacity(0.9),
-                      Color(0xff161d27),
-                    ],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                  ),
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: Stack(
+        children: [
+          Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: BoxDecoration(
+              color: Color(0xff161d27),
+              image: DecorationImage(
+                image: AssetImage(
+                  'assets/muscleEntry.jpg',
                 ),
+                fit: BoxFit.cover,
               ),
-              Center(
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.transparent,
+                  Color(0xff161d27).withOpacity(0.6),
+                  Color(0xff161d27).withOpacity(0.9),
+                  Color(0xff161d27),
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
+            ),
+            child: Scaffold(
+              backgroundColor: Colors.transparent,
+              body: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -199,9 +199,9 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
               ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
