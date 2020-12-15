@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   flutter_spinkit: "^4.1.2"
+  flutter_native_splash: ^0.1.9
 
 dev_dependencies:
   flutter_test:
@@ -36,6 +37,13 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+
+# Initialize de Splash Screen before app launching
+# Command necessary in terminal
+  # flutter pub pub run flutter_native_splash:create
+flutter_native_splash:
+  image: assets/splash.png
+  color: "42a5f5"
 
 # The following section is specific to Flutter.
 flutter:
