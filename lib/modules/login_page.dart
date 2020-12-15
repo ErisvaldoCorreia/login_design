@@ -1,10 +1,35 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'home_page.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool _isLoading = false;
+
+  mudaLoading() {
+    setState(() {
+      _isLoading = !_isLoading;
+    });
+  }
+
+  goToHomePage() {
+    mudaLoading();
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (contex) => HomePage(),
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
+    print(_isLoading);
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Stack(
@@ -45,7 +70,7 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'Fit',
+                          'Wall',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 44,
@@ -55,9 +80,9 @@ class LoginPage extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          'Training',
+                          'Academia',
                           style: TextStyle(
-                            color: Color(0xfffe972f),
+                            color: Color(0xffE4A708),
                             fontSize: 44,
                             fontWeight: FontWeight.w600,
                             fontFamily: 'Dosis',
@@ -152,27 +177,25 @@ class LoginPage extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 40),
                       child: FlatButton(
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (contex) => HomePage(),
-                              ));
+                          mudaLoading();
+                          Timer(Duration(seconds: 3), () => goToHomePage());
                         },
                         color: Color(0xfffe972f),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: SpinKitThreeBounce(
-                          size: 25.0,
-                          color: Colors.white,
-                        ),
-                        // Text(
-                        //   'ENTRAR',
-                        //   style: TextStyle(
-                        //       color: Colors.white,
-                        //       fontWeight: FontWeight.bold,
-                        //       fontSize: 18),
-                        // ),
+                        child: _isLoading
+                            ? SpinKitThreeBounce(
+                                size: 25.0,
+                                color: Colors.white,
+                              )
+                            : Text(
+                                'ENTRAR',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18),
+                              ),
                       ),
                     ),
                     SizedBox(height: 20),
