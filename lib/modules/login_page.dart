@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'home_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -161,13 +162,17 @@ class LoginPage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Text(
-                          'ENTRAR',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18),
+                        child: SpinKitThreeBounce(
+                          size: 25.0,
+                          color: Colors.white,
                         ),
+                        // Text(
+                        //   'ENTRAR',
+                        //   style: TextStyle(
+                        //       color: Colors.white,
+                        //       fontWeight: FontWeight.bold,
+                        //       fontSize: 18),
+                        // ),
                       ),
                     ),
                     SizedBox(height: 20),
