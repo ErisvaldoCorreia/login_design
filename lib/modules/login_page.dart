@@ -259,7 +259,29 @@ class _LoginPageState extends State<LoginPage> {
     showModalBottomSheet(
         context: context,
         builder: (BuildContext ctx) {
-          return Container();
+          return Container(
+            color: baseBlack,
+            child: Container(
+              child: Center(
+                child: Text(
+                  'DADOS INCORRETOS',
+                  style: TextStyle(
+                    color: baseOrange,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: 'Dosis',
+                    fontSize: 30,
+                  ),
+                ),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
+              ),
+            ),
+          );
         });
   }
 }
