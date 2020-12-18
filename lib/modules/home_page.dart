@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:login_design/utils/constants.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -10,9 +11,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff161d27),
+      backgroundColor: baseBlack,
       appBar: AppBar(
-        backgroundColor: Color(0xff161d27),
+        backgroundColor: baseBlack,
         elevation: 0,
         title: Text('Bem Vindo!'),
       ),
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
           Center(
             child: SpinKitFadingGrid(
               size: 50.0,
-              color: Color(0xfffe972f),
+              color: baseOrange,
             ),
           ),
           Padding(
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         'Training',
                         style: TextStyle(
-                          color: Color(0xfffe972f),
+                          color: baseOrange,
                           fontSize: 44,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Dosis',
@@ -67,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 30),
                   Text(
                     'Desenvolvedor: Erisvaldo Correia',
-                    style: TextStyle(color: Color(0xfffe972f), fontSize: 16),
+                    style: TextStyle(color: baseOrange, fontSize: 16),
                   )
                 ],
               ),

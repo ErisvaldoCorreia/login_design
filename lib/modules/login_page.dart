@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:login_design/utils/constants.dart';
 import 'home_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -12,14 +13,15 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   bool _isLoading = false;
 
-  mudaLoading() {
+  changeLoading() {
+    FocusScope.of(context).unfocus();
     setState(() {
       _isLoading = !_isLoading;
     });
   }
 
   goToHomePage() {
-    mudaLoading();
+    changeLoading();
     Navigator.push(
         context,
         MaterialPageRoute(
@@ -38,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
             width: double.infinity,
             height: double.infinity,
             decoration: BoxDecoration(
-              color: Color(0xff161d27),
+              color: baseBlack,
               image: DecorationImage(
                 image: AssetImage(
                   'assets/muscleEntry.jpg',
@@ -52,9 +54,9 @@ class _LoginPageState extends State<LoginPage> {
               gradient: LinearGradient(
                 colors: [
                   Colors.transparent,
-                  Color(0xff161d27).withOpacity(0.6),
-                  Color(0xff161d27).withOpacity(0.9),
-                  Color(0xff161d27),
+                  baseBlack.withOpacity(0.6),
+                  baseBlack.withOpacity(0.9),
+                  baseBlack,
                 ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -83,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                           Text(
                             'Training',
                             style: TextStyle(
-                              color: Color(0xffE4A708),
+                              color: baseOrange,
                               fontSize: 44,
                               fontWeight: FontWeight.w600,
                               fontFamily: 'Dosis',
@@ -95,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(height: 10),
                       Text(
                         'Hora de começar o treino! Faça Login',
-                        style: TextStyle(color: Colors.grey.shade500),
+                        style: TextStyle(color: greyShaded),
                       ),
                       SizedBox(height: 20),
                       Container(
@@ -110,10 +112,10 @@ class _LoginPageState extends State<LoginPage> {
                           decoration: InputDecoration(
                             hintText: 'E-mail',
                             hintStyle: TextStyle(
-                              color: Colors.grey.shade500,
+                              color: greyShaded,
                             ),
                             filled: true,
-                            fillColor: Color(0xff161d27),
+                            fillColor: baseBlack,
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                               borderSide: BorderSide(
@@ -143,10 +145,10 @@ class _LoginPageState extends State<LoginPage> {
                           decoration: InputDecoration(
                             hintText: 'Senha',
                             hintStyle: TextStyle(
-                              color: Colors.grey.shade500,
+                              color: greyShaded,
                             ),
                             filled: true,
-                            fillColor: Color(0xff161d27),
+                            fillColor: baseBlack,
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                               borderSide: BorderSide(
@@ -166,7 +168,7 @@ class _LoginPageState extends State<LoginPage> {
                       Text(
                         'Esqueceu sua senha?',
                         style: TextStyle(
-                          color: Color(0xfffe972f),
+                          color: baseOrange,
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
@@ -178,10 +180,10 @@ class _LoginPageState extends State<LoginPage> {
                         padding: EdgeInsets.symmetric(horizontal: 40),
                         child: FlatButton(
                           onPressed: () {
-                            mudaLoading();
+                            changeLoading();
                             Timer(Duration(seconds: 3), () => goToHomePage());
                           },
-                          color: Color(0xfffe972f),
+                          color: baseOrange,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -206,7 +208,7 @@ class _LoginPageState extends State<LoginPage> {
                           Text(
                             'Primeira vez aqui?',
                             style: TextStyle(
-                              color: Colors.grey.shade500,
+                              color: greyShaded,
                               fontSize: 16,
                             ),
                           ),
@@ -216,7 +218,7 @@ class _LoginPageState extends State<LoginPage> {
                           Text(
                             'Cadastra-se',
                             style: TextStyle(
-                              color: Color(0xfffe972f),
+                              color: baseOrange,
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
                             ),

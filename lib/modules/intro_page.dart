@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:login_design/utils/constants.dart';
 import 'login_page.dart';
 
 class IntroPage extends StatefulWidget {
@@ -24,12 +25,12 @@ class _IntroPageState extends State<IntroPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff161d27),
+      backgroundColor: baseBlack,
       body: Stack(
         children: [
           SpinKitFadingCube(
             size: 70.0,
-            color: Color(0xfffe972f),
+            color: baseOrange,
           ),
           Padding(
             padding: EdgeInsets.only(bottom: 50.0),
@@ -54,7 +55,7 @@ class _IntroPageState extends State<IntroPage> {
                       Text(
                         'Training',
                         style: TextStyle(
-                          color: Color(0xfffe972f),
+                          color: baseOrange,
                           fontSize: 44,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Dosis',
@@ -65,7 +66,7 @@ class _IntroPageState extends State<IntroPage> {
                   ),
                   Text(
                     'Carregando Aplicação ...',
-                    style: TextStyle(color: Colors.grey.shade500),
+                    style: TextStyle(color: greyShaded),
                   )
                 ],
               ),
