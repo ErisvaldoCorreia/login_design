@@ -13,6 +13,10 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   bool _isLoading = false;
 
+  //Variaveis para coleta de campos temporárias
+  String email = '';
+  String password = '';
+
   changeLoading() {
     FocusScope.of(context).unfocus();
     setState(() {
@@ -31,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    print(_isLoading);
+    print('$email e $password');
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Stack(
@@ -104,13 +108,16 @@ class _LoginPageState extends State<LoginPage> {
                         height: 60,
                         padding: EdgeInsets.symmetric(horizontal: 40),
                         child: TextField(
+                          onChanged: (text) {
+                            email = text;
+                          },
                           keyboardType: TextInputType.emailAddress,
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
                           ),
                           decoration: InputDecoration(
-                            hintText: 'E-mail',
+                            hintText: 'Usuário',
                             hintStyle: TextStyle(
                               color: greyShaded,
                             ),
@@ -136,6 +143,9 @@ class _LoginPageState extends State<LoginPage> {
                         height: 60,
                         padding: EdgeInsets.symmetric(horizontal: 40),
                         child: TextField(
+                          onChanged: (text) {
+                            password = text;
+                          },
                           keyboardType: TextInputType.number,
                           obscureText: true,
                           style: TextStyle(
@@ -181,7 +191,14 @@ class _LoginPageState extends State<LoginPage> {
                         child: FlatButton(
                           onPressed: () {
                             changeLoading();
-                            Timer(Duration(seconds: 3), () => goToHomePage());
+                            Timer(Duration(seconds: 3), () {
+                              if (email == 'erisvaldo' && password == '12345') {
+                                goToHomePage();
+                              } else {
+                                changeLoading();
+                                _bottomSheet(context);
+                              }
+                            });
                           },
                           color: baseOrange,
                           shape: RoundedRectangleBorder(
@@ -236,5 +253,13 @@ class _LoginPageState extends State<LoginPage> {
         ],
       ),
     );
+  }
+
+  _bottomSheet(context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (BuildContext ctx) {
+          return Container();
+        });
   }
 }
