@@ -43,7 +43,7 @@ class _IntroPageState extends State<IntroPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Fit',
+                        'Wall',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 44,
@@ -53,7 +53,7 @@ class _IntroPageState extends State<IntroPage> {
                         ),
                       ),
                       Text(
-                        'Training',
+                        'Academia',
                         style: TextStyle(
                           color: baseOrange,
                           fontSize: 44,

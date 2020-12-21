@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              'Fit',
+                              'Wall',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 44,
@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                             Text(
-                              'Training',
+                              'Academia',
                               style: TextStyle(
                                 color: baseOrange,
                                 fontSize: 44,

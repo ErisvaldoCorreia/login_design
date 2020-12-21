@@ -33,14 +33,14 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text(
-                    'Aguardem',
+                    'Aguarde',
                     style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Fit',
+                        'Wall',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 44,
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Text(
-                        'Training',
+                        'Academia',
                         style: TextStyle(
                           color: baseOrange,
                           fontSize: 44,
