@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.login_design">
    <application
-        android:label="login_design"
+        android:label="WallAcademia"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
