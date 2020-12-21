@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                 color: baseBlack,
                 image: DecorationImage(
                   image: AssetImage(
-                    'assets/muscleEntry.jpg',
+                    'assets/muscleEntry3.jpg',
                   ),
                   fit: BoxFit.cover,
                 ),
