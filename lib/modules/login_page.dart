@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:login_design/utils/constants.dart';
@@ -28,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
     changeLoading();
     Navigator.push(
         context,
-        MaterialPageRoute(
+        CupertinoPageRoute(
           builder: (contex) => HomePage(),
         ));
   }
@@ -42,13 +42,13 @@ class _LoginPageState extends State<LoginPage> {
         child: Stack(
           children: [
             Container(
-              width: double.infinity,
-              height: double.infinity,
+              //width: double.infinity,
+              //height: double.infinity,
               decoration: BoxDecoration(
                 color: baseBlack,
                 image: DecorationImage(
                   image: AssetImage(
-                    'assets/muscleEntry3.jpg',
+                    'assets/food.jpeg',
                   ),
                   fit: BoxFit.cover,
                 ),
@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              'Wall',
+                              'Food',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 44,
@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                             Text(
-                              'Academia',
+                              'Login',
                               style: TextStyle(
                                 color: baseOrange,
                                 fontSize: 44,
@@ -101,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Hora de começar o treino! Faça Login',
+                          'Venha conhecer nosso cardápio! Faça Login',
                           style: TextStyle(color: greyShaded),
                         ),
                         SizedBox(height: 20),
@@ -266,14 +266,34 @@ class _LoginPageState extends State<LoginPage> {
             color: baseBlack,
             child: Container(
               child: Center(
-                child: Text(
-                  'DADOS INCORRETOS',
-                  style: TextStyle(
-                    color: baseOrange,
-                    fontWeight: FontWeight.w600,
-                    fontFamily: 'Dosis',
-                    fontSize: 30,
-                  ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.error_outline,
+                      size: 28,
+                      color: baseOrange,
+                    ),
+                    Text(
+                      'DADOS INCORRETOS',
+                      style: TextStyle(
+                        color: baseBlack,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: 'Dosis',
+                        fontSize: 30,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Revise seu usuário e sua senha\ne tente novamente!',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontFamily: 'Dosis',
+                        fontSize: 19,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
               ),
               decoration: BoxDecoration(

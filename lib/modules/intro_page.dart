@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:login_design/utils/constants.dart';
 import 'login_page.dart';
@@ -18,7 +19,7 @@ class _IntroPageState extends State<IntroPage> {
         Duration(seconds: 5),
         () => Navigator.pushReplacement(
             context,
-            MaterialPageRoute(
+            CupertinoPageRoute(
               builder: (contex) => LoginPage(),
             )));
   }
@@ -43,7 +44,7 @@ class _IntroPageState extends State<IntroPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Wall',
+                        'Food',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 44,
@@ -53,7 +54,7 @@ class _IntroPageState extends State<IntroPage> {
                         ),
                       ),
                       Text(
-                        'Academia',
+                        'Login',
                         style: TextStyle(
                           color: baseOrange,
                           fontSize: 44,

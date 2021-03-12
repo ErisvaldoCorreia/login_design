@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Wall',
+                        'Food',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 44,
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Text(
-                        'Academia',
+                        'Login',
                         style: TextStyle(
                           color: baseOrange,
                           fontSize: 44,
@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                   Text(
-                    'Aplicativo em Construção!',
+                    'Estudo de Composição de Layout',
                     style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                   SizedBox(height: 30),

@@ -29,7 +29,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   flutter_spinkit: "^4.1.2"
-  flutter_native_splash: ^0.1.9
   flutter_launcher_icons: "^0.8.0"
   flutter_launcher_name: "^0.0.1"
 
@@ -40,12 +39,6 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
-# Initialize de Splash Screen before app launching
-# Command necessary in terminal
-  # flutter pub pub run flutter_native_splash:create
-#flutter_native_splash:
-  #image: assets/splash.png
-  #color: "42a5f5"
 
 flutter_icons:
   android: true
@@ -53,7 +46,7 @@ flutter_icons:
   image_path: "assets/icon.png"
 
 flutter_launcher_name:
-  name: "WallAcademia"
+  name: "FoodLogin"
 
 # The following section is specific to Flutter.
 flutter:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter/services.dart';
 import 'package:login_design/modules/intro_page.dart';
 
@@ -12,9 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Login Design',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: IntroPage(),
     );
   }
