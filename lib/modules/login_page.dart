@@ -35,7 +35,6 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    print('$email e $password');
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: SafeArea(
@@ -275,7 +274,7 @@ class _LoginPageState extends State<LoginPage> {
                       color: baseOrange,
                     ),
                     Text(
-                      'DADOS INCORRETOS',
+                      'SENHA ERRADA!',
                       style: TextStyle(
                         color: baseBlack,
                         fontWeight: FontWeight.w600,
